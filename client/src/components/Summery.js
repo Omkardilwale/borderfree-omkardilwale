@@ -1,12 +1,11 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbarr from './Navbarr';
-import Footerr from './Footerr';
 //https://afternoon-mountain-39488.herokuapp.com/
 const Summery = ({prod}) => {
   const navigatee = useNavigate();
   const addProduct=async()=>{
-    const response = await fetch('https://fakestoreapi.com/products',{
+    const response = await fetch('http://localhost:5000/order',{
         method: "POST",
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(prod)
